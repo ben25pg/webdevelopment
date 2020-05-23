@@ -1,0 +1,304 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf 8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+        <title>Dr.APJ Abdul kalam Tribute Page</title>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <style>
+            :root{
+                --color:whitesmoke;
+                --box-shadow:10px 10px 5px rgb(75, 67, 75);
+
+            }
+            body{
+               /* 
+                background-image:url(images/A._P._J._Abdul_Kalam_in_2008.jpg); 
+                width:100vw;
+                height:100vw; 
+               background:repeating-linear-gradient(45deg, rgb(230, 197, 245) 0%,transparent 5%,transparent 2%), rgb(61, 40, 65) repeating-linear-gradient(-45deg, rgb(231,205,230) 0%,transparent 5%,transparent 2%);
+          */
+                color:rgb(189, 189, 241);
+           }
+            #main{
+            /*
+               background:repeating-linear-gradient(45deg, rgba(133, 214, 252, 0.938) 0%,transparent 5%,transparent 2%), rgb(61, 40, 65) repeating-linear-gradient(-45deg, rgb(231,205,230) 0%,transparent 5%,transparent 2%);
+                */
+                background:repeating-linear-gradient(188deg,rgba(100, 16, 75, 0.3) 50%,transparent 90%,transparent 99%),-webkit-radial-gradient(circle,rgba(231, 191, 243, 0.938) 5%, transparent 10% ,transparent 10%);
+                color:rgb(68, 7, 26);
+            }
+            .header{
+                display:grid;
+                width:100%;
+                height:100px;
+                grid-template-columns:1fr 3fr;
+                grid-template-rows:1fr;
+                grid-area:"header advert";
+            }
+            
+            @media only screen and(min-width: 300px){
+                .header{
+                    display:grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr;
+                    grid-area:"header"
+                                "advert";
+                }
+            }
+            .heading{
+                position:relative;
+                padding:0px;
+                font-size:2rem;
+                height:70px;
+                text-align:center;
+                color:darkmagenta;
+                background-color:whitesmoke;
+            
+                
+            }
+            .heading2{
+                
+            }
+            .nav{
+              position:relative;
+              display:flex;
+              padding:10px;
+              margin:0;
+              background:darkmagenta;
+              text-align:center;
+              
+            }
+            #navhead{
+                
+                font-family:fantasy !important;
+                font-size:2rem;
+                font-weight:bolder;
+                justify-content:space-between;
+                align-items:center;
+                flex:2 1 20px;
+            }
+            #navlist{
+                font-family: fantasy;
+                justify-content:space-between;
+                align-items:center;
+                font-size:1.5rem;
+        
+            }
+            #navlist>li>a{
+                padding:20px;
+                
+            }
+            #navlist,#navhead{
+                display:inline-flex;
+                list-style:none;
+            }
+           
+            #navlist>li>a,#navhead>li>a{
+                text-decoration:none;
+                color:var(--color);
+            
+            }
+            #navlist>li>a:hover,#navhead>li>a:hover{
+                color:blue;
+            }
+            #title{
+                color:darkmagenta;
+                font-family: 'Acme', sans-serif;
+                
+
+            }
+            #img-div{
+                width:100vw;
+                height:auto;
+                text-align:center;
+
+            
+            }
+            #img-caption{
+                
+                text-align:center;
+                color:blue;
+            }
+            #image{
+                position:relative;
+             background-size:cover;
+             max-width:100%;
+             height:auto;
+             margin:auto;
+            }
+            #tribute-info{
+                background-color:transparent;
+                font-family: 'Acme', sans-serif;   
+                padding:10px;       
+                text-decoration:none;
+                  }
+            .tributelist{
+                position:relative;
+                padding:10px 10px;
+                margin:20px 20px;
+                display:grid;
+                grid-template-columns: repeat(auto-fit 1fr);
+                grid-template-rows: repeat(auto-fit 2fr);
+                grid-gap:20px;
+                grid-template-areas:"firsr first first"
+                                    "second second second"
+                                    "third third third"
+                                    "fourth fourth fourth"
+                                    "fifth fifth fifth"
+                                    "sixth sixth sixth"
+                                    "seventh seventh seventh"
+            }
+            .born{
+                background-color:rgba(211, 211, 211, 0.637);
+                border-radius:10%;
+                box-shadow:var(--box-shadow);
+                text-align:justify;
+                align-self:center;
+                padding:10px;
+                grid-area:1/1/3/3;
+            }
+            .edu{
+                background-color:rgba(211, 211, 211, 0.637);
+                border-radius:10%;
+                box-shadow:var(--box-shadow);
+                grid-area: 2/3/4/4;
+                align-self:center;
+                padding:10px;
+                text-align:justify;
+
+                }
+            .science{
+                background-color:rgba(211, 211, 211, 0.637);
+                border-radius:10%;
+                box-shadow:var(--box-shadow);
+                grid-area:4/1/6/2;
+                align-self:center;
+                padding:10px;
+                text-align:justify;
+
+            }
+            .awards{
+                background-color:rgba(211, 211, 211, 0.637);
+                border-radius:10%;
+                box-shadow:var(--box-shadow);
+                grid-area:5/3/7/4;
+                align-self:center;
+                padding:10px;
+                text-align:justify;
+
+
+            }
+            .president{
+                background-color:rgba(211, 211, 211, 0.637);
+                border-radius:10%;
+                box-shadow:var(--box-shadow);
+                grid-area:7/1/9/2;
+                align-self:center;
+                padding:10px;
+                text-align:justify;
+
+            }
+            .end{
+                background-color:rgba(211, 211, 211, 0.637);
+                border-radius:10%;
+                box-shadow:var(--box-shadow);
+                grid-area:8/3/10/4;
+                align-self:center;
+                padding:10px;
+                text-align:justify;
+
+            }
+            .tribute-link{
+                position:relative;
+                background-color:rgba(155, 139, 149, 0.637);
+                padding:50px;
+                font-size:20px;
+                border-end-start-radius:20px;
+                height:10vw;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                text-align:center;
+
+            }
+           footer>a{
+               text-decoration:none;
+               color:rgb(114, 11, 44)!important;
+
+           }
+        </style>
+        
+    </head>
+    <body>
+        <main id="main">
+            <header class="header">
+                <div class="heading">
+                    <div id="title">Dr.APJ Abdul Kalam</div>
+                    <div style="font-family: 'Caveat', cursive;font-size:30px;">The missile man of India</div>
+                </div>
+                <div class="heading2">
+            <nav class="nav">
+                        <div id="navhead"><li><a href="mytributepage.html">My Tribute Page</a></li></div>
+                        <div id="navlist">
+                        <li><a href="mytributepage.html" >Home</a></li>
+                        <li><a href="">Stories</a></li>
+                        <li><a href="">Awards</a></li>
+                        <li><a href="">Quotes</a></li>
+                        </div>
+            </nav>
+        </div>
+        </header>
+            <div id="img-div">
+                <figure >
+                <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/APJ_Abdul_Kalam_Speech.JPG/800px-APJ_Abdul_Kalam_Speech.JPG" alt="President APJ Abdul Kalam with President George.W.Bush and prime Minister Manmohan Singh">
+                <br>
+                <figcaption id="img-caption">Dr.APJ ABdul Kalam during his lecture in Bits pilani</figcaption>
+                </figure>
+            </div>
+            <section id="tribute-info">
+                <h2>A tribute to Dr APJ Abdul kalam</h2>
+                <div class="tributelist">
+                <div class="born">
+                    <div>
+                    <h3>The Beginning..</h3>
+                    <p>Born-October 15,1931 in Rameshwaram,India.</p>
+                    <div><strong><em>"Birthday:The only day in your life...your mother smiled when you cried"<br>-Dr.APJ Abdul Kalam.</em></strong></div>
+
+                </div>
+                
+                </div>
+                <div class="edu">
+                    <h3>Education</h3>
+                    <p>AS a bright and hardworking student, he grduated in physics from Saint Joseph College, Tiruchirapalli and moved to Madras in 1955 to study Aerospace Engineering in Madras Institute of Technology. </p>
+                </div>
+                <div class="science">
+                    <h3>As a Scientist..</h3>
+                    <p>As the Project Director of India's first Satellite launch Vehicle(SLV III) successfully deployed the Rohini satellite in earth's orbit. In 1982, rejoined DRDO and produced a number od succesful missiles, hence earned the nickname "The Missile Man".</p>
+                </div>
+                <div class="awards">
+                    <h3>Awards</h3>
+                    <p>Kalam was Honoured by Government of India with Padma Bhushan in 1981 and Padma Vibhushan in 1990.Recevied 7 honorary doctorate from 40 universities. Ranked number 2 in Outlook India's poll of <em>The Greatest Indian</em> in 2012. </p>
+                </div>
+                <div class="president">
+                    <h3>The 11th Indian President</h3>
+                    <p>Sworn in as the President of India on July 25, 2002.Affectionately known as  <em>The People's President</em>. Later told in an interview that "signing the office of profit bill was the toughest decision during his tenure." Kalam later then became a visiting professor due to his love for teaching.<p>
+                </div>
+                <div class="end">
+                    <h3>The Exit..</h3>
+                    <p>Abdul Kalam believed that there is no other profession in the world that is more important to society than that of a teacher. On 27 July 2015, only five minutes into his lecture at Indian Institute of Management Shillong kalam collapsed and the era of The Missile Man of India came to an End. </p>
+                </div>
+            </div>
+            </section>
+            <footer class="tribute-link">
+                
+               <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" target="_blank">Click here to learn more about <b>Dr.APJ Abdul Kalam</b></a>
+               <a href="https://www.brainyquote.com/authors/a-p-j-abdul-kalam-quotes" target="_blank">Abdul Kalam Quotes</a>
+                
+            </footer>
+        </main>
+    </body>
+</html>
